@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# input files / compiled ts / etc.
+build/
+src/day*/input.txt
+src/day*/*.js
+*.js
