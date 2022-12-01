@@ -35,8 +35,8 @@ const main: Function = async () => {
   const input: string[] = await getInput("../../src/day1/input.txt");
   const formattedInput: number[] = formatInput(input);
 
-  const partOneSolution = solvePartOne(formattedInput);
-  const partTwoSolution = solvePartTwo(formattedInput);
+  const partOneSolution: number = solvePartOne(formattedInput);
+  const partTwoSolution: number = solvePartTwo(formattedInput);
 
   console.log(`Solution for part one: ${partOneSolution}.`);
   console.log(`Solution for part two: ${partTwoSolution}.`);
