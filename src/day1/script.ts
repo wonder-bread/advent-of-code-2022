@@ -1,4 +1,4 @@
-const { getInput } = require("../util");
+import { getInput } from "../util";
 
 type FormattedAccumulatorType = {
   count: number;
@@ -32,14 +32,20 @@ const solvePartTwo: Function = (input: number[]) =>
     .reduce((acc: number, calorieCount: number) => acc + calorieCount, 0);
 
 const main: Function = async () => {
-  const input: string[] = await getInput("../../src/day1/input.txt");
-  const formattedInput: number[] = formatInput(input);
+  try {
+    const input: string[] | undefined = await getInput(
+      "../../src/day1/input.txt"
+    );
+    const formattedInput: number[] = formatInput(input);
 
-  const partOneSolution: number = solvePartOne(formattedInput);
-  const partTwoSolution: number = solvePartTwo(formattedInput);
+    const partOneSolution: number = solvePartOne(formattedInput);
+    const partTwoSolution: number = solvePartTwo(formattedInput);
 
-  console.log(`Solution for part one: ${partOneSolution}.`);
-  console.log(`Solution for part two: ${partTwoSolution}.`);
+    console.log(`Solution for part one: ${partOneSolution}.`);
+    console.log(`Solution for part two: ${partTwoSolution}.`);
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 main();
