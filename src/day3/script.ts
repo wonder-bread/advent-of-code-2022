@@ -41,10 +41,7 @@ const getItemPriority: Function = (item: number) =>
 const solvePartOne: Function = (input: string[][]) =>
   input.reduce(
     (acc: number, line) =>
-      acc +
-      getItemPriority(
-        [...findCommonCharacter(line[0], line[1])][0].charCodeAt(0)
-      ),
+      acc + getItemPriority([...findCommonCharacter(...line)][0].charCodeAt(0)),
     0
   );
 
