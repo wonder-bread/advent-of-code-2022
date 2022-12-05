@@ -105,6 +105,6 @@ dist
 
 # input files / compiled ts / etc.
 build/
-src/day*/input.txt
+src/day*/*.txt
 src/day*/*.js
 *.js
